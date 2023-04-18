@@ -33,5 +33,11 @@
 $enable-negative-margins: true;
 
 .mt-n1 {
-    margin-top: -2rem !important;
+  margin-top: -2rem !important;
+}
+
+.form-floating {
+  textarea {
+    height: 300px;
   }
+}

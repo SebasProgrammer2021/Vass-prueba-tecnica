@@ -1,6 +1,8 @@
 import backgroundImage from "./static/background-mobile.jpg";
 import "./App.css";
 
+import { dataEmpresas, dataSiteMapVASS, dataTalento } from "./data/data";
+
 function App() {
   return (
     <div className="">
@@ -83,46 +85,127 @@ function App() {
       </nav>
       <img src={backgroundImage} className="img-fluid" alt="backgroundImage" />
       <div className="ps-3">
-        <p class="text-uppercase mt-5 w-50">Empecemos a hacerlo sencillo</p>
-        <p class="text-uppercase w-75">
+        <p className="text-uppercase mt-5 w-50">Empecemos a hacerlo sencillo</p>
+        <p className="text-uppercase w-75">
           Nos emociona impulsar tu transformación digital
         </p>
       </div>
-      <form className="container">
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">
-            Email address
+      <form className="p-5 bg-black text-white">
+        <div className="mb-3 mt-2">
+          <label htmlFor="exampleInputEmail1" className="form-label">
+            Nombres y apellidos
           </label>
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
           />
-          <div id="emailHelp" class="form-text">
+          {/* <div id="emailHelp" className="form-text">
             We'll never share your email with anyone else.
-          </div>
+          </div> */}
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">
-            Password
+        <div className="mb-3">
+          <label htmlFor="exampleInputPassword1" className="form-label">
+            Email
           </label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="exampleInputPassword1"
           />
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1">
-            Check me out
+        <div className="mb-3">
+          <label htmlFor="exampleInputPassword1" className="form-label">
+            Empresa/Organismo
           </label>
+          <input
+            type="password"
+            className="form-control"
+            id="exampleInputPassword1"
+          />
         </div>
-        <button type="submit" class="btn btn-primary">
-          Submit
+        <div className="mb-3">
+          <label htmlFor="exampleInputPassword1" className="form-label">
+            País
+          </label>
+          <input
+            type="password"
+            className="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="exampleInputPassword1" className="form-label">
+            Teléfono
+          </label>
+          <input
+            type="password"
+            className="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div className="form-floating">
+          <textarea
+            className="form-control"
+            placeholder="Leave a comment here"
+            id="floatingTextarea2"
+          ></textarea>
+          <label htmlFor="floatingTextarea2">Comments</label>
+        </div>
+        <button type="submit" className="btn btn-primary">
+          Enviar
         </button>
       </form>
+      <hr className="border border-danger border-2 opacity-50" />
+      <footer className="container bg-dark text-white">
+        <h3>Complex made simple</h3>
+        <div className="">
+          <div className="row">
+            <div className="col-6">
+              Sitemap VASS
+              <div className="pt-3">
+                {dataSiteMapVASS.map((item, index) => (
+                  <p className="m-0" key={index}>
+                    {item.value}
+                  </p>
+                ))}
+              </div>
+            </div>
+            <div className="col-6">
+              Sitemap Talento
+              <div className="pt-3">
+                {dataTalento.map((item, index) => (
+                  <p className="m-0" key={index}>
+                    {item.value}
+                  </p>
+                ))}
+              </div>
+            </div>
+            <div className="col py-5">
+              Empresas
+              <div className="pt-3">
+                {dataEmpresas.map((item, index) => (
+                  <p className="m-0" key={index}>
+                    {item.value}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr className="border border-danger border-2 opacity-50" />
+        <div className="text-center pb-5">
+          <h6>Copyright Todos los derechos reservados</h6>
+          <div className="row pt-4 m-0">
+            <p className="col m-0">Memoria ambiental</p>
+            <p className="col m-0">Politica de cookies</p>
+          </div>
+          <p className="m-0">Politica de privacidad</p>
+          <p className="m-0">Politica de calidad y medio ambiente</p>
+          <div className="mt-4">Social networks</div>
+        </div>
+      </footer>
     </div>
   );
 }
