@@ -75,3 +75,33 @@ export const dataEmpresas = [
     value: "vdSHOP",
   },
 ];
+
+export const dataNavbarDropdown = [
+  {
+    value: "Mercados",
+  },
+  {
+    value: "Países",
+  },
+  {
+    value: "Somos VASS",
+  },
+  {
+    value: "Cómo lo hacemos",
+  },
+];
+
+export const dataNavbarStatic = [
+  {
+    value: "Insights",
+  },
+  {
+    value: "Noticias",
+  },
+  {
+    value: "VASS Research",
+  },
+  {
+    value: "EN",
+  },
+];
