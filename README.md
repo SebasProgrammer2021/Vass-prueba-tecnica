@@ -1,3 +1,8 @@
+# Descripción
+
+Este proyecto se crea con la necesidad de presentar la prueba técnica para la empresa vass, en la cual a partir de unas especificaciones y un mockup se pretende realizar la inplementación en react con el uso de bootstrap y sass
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
